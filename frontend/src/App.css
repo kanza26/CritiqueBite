@@ -1,0 +1,112 @@
+/* src/App.css */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.hero h1 { font-size: 1.8rem; margin: 0 0 8px; }
+.hero p { color: #4b5563; margin: 0; }
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field-label { font-weight: 600; font-size: 0.92rem; }
+.req { color: #dc2626; }
+
+.field-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #fff;
+}
+.field-input:focus { outline: 2px solid #6366f1; border-color: transparent; }
+
+.stars { display: flex; align-items: center; gap: 4px; }
+.star {
+  background: transparent;
+  border: none;
+  font-size: 1.7rem;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: transform 0.08s ease;
+}
+.star:hover { transform: scale(1.15); }
+.star.active { color: #f59e0b; }
+.rating-value { margin-left: 8px; color: #6b7280; font-size: 0.9rem; }
+
+.yesno { display: flex; gap: 8px; }
+.pill {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.pill.active { background: #6366f1; color: #fff; border-color: #6366f1; }
+
+.review-form {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.form-title { margin: 0 0 4px; font-size: 1.2rem; }
+
+.form-actions { display: flex; gap: 10px; margin-top: 8px; }
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn.primary { background: #6366f1; color: #fff; }
+.btn.primary:disabled { background: #a5b4fc; cursor: not-allowed; }
+.btn.ghost { background: transparent; border: 1px solid #d1d5db; }
+
+.error { color: #dc2626; font-size: 0.9rem; margin: 0; }
+.success { color: #059669; font-size: 0.95rem; margin: 0; }
+.loading { color: #6b7280; }
+.submitted {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spinner {
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
